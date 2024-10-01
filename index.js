@@ -49,7 +49,11 @@ function parseParashah(parashah) {
         }
     }
 
-    return null;
+    return {
+        title: "No Parashah readings found for today",
+        torahReading: "N/A",
+        haftarahReading: "N/A"
+    };
 }
 
 function getSaturdayFormattedDate() {
