@@ -8,7 +8,13 @@ const discordUrl = process.env.DISCORD_URL
 //     doWork();
 // });
 
-console.log(discordUrl);
+let i = 0;
+
+if(i < 1) {
+    doWork();
+
+    i++;
+}
 
 function doWork() {
     getParashah()
