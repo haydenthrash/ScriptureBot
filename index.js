@@ -4,7 +4,7 @@ require('dotenv').config()
 const parashahUrl = "https://www.hebcal.com/hebcal?v=1&cfg=json&s=on&start=DATE_HERE&end=DATE_HERE"
 const discordUrl = process.env.DISCORD_URL
 
- schedule.scheduleJob('0 8 * * 2', () => {
+ schedule.scheduleJob('0 12 * * 0', () => {
      doWork();
  });
 
