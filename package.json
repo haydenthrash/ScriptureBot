@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "devStart": "nodemon index.js"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "devStart": "nodemon dist/index.js"
   },
   "keywords": [],
   "author": "",

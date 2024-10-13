@@ -1,1 +1,1 @@
-worker: node index.js
+worker: sh -c "tsc && node dist/index.js"
