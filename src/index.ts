@@ -1,16 +1,25 @@
 import { ParashahRecurringReading } from "./recurring-readings";
+import { LectionaryRecurringReading } from "./recurring-readings/LectionaryRecurringReading";
 import { DiscordWebhookMessage } from "./types/models";
 const schedule = require('node-schedule')
 require('dotenv').config()
 
 const discordUrl: string | undefined = process.env.DISCORD_URL;
 const recurringParashahReading = new ParashahRecurringReading();
+const recurringLectionaryReading = new LectionaryRecurringReading();
 
-schedule.scheduleJob('0 13 * * 0', () => {
+schedule.scheduleJob('0 12 * * 6', () => {
     recurringParashahReading.getWebhookMessage()
       .then((message) => {
         sendWebhookMessage(message)
       });
+});
+
+schedule.scheduleJob('0 12 * * 3', () => {
+  recurringLectionaryReading.getWebhookMessage()
+    .then((message) => {
+      sendWebhookMessage(message)
+    });
 });
 
 
