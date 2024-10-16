@@ -6,7 +6,7 @@ require('dotenv').config()
 const discordUrl: string | undefined = process.env.DISCORD_URL;
 const recurringParashahReading = new ParashahRecurringReading();
 
-schedule.scheduleJob('0 13 * * 2', () => {
+schedule.scheduleJob('0 13 * * 0', () => {
     recurringParashahReading.getWebhookMessage()
       .then((message) => {
         sendWebhookMessage(message)
