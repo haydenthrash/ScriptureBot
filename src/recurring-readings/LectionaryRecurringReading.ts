@@ -1,7 +1,7 @@
 
 import { RecurringDiscordReading } from "../types/interfaces";
 import { DiscordWebhookMessage, LectionaryReading } from "../types/models";
-import { getPreviousSundayFormattedDate } from "../helpers/date.helpers"
+import { getNextSundayFormattedDate } from "../helpers/date.helpers"
 
 export class LectionaryRecurringReading implements RecurringDiscordReading {
     private lectionaryUrl: string = "https://www.lectserve.com/date/DATE_HERE";
