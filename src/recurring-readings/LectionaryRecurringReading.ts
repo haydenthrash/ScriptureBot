@@ -17,7 +17,7 @@ export class LectionaryRecurringReading implements RecurringDiscordReading {
     }
 
     private async getSundayLectionaryReading(): Promise<any> {
-        let sunFormatted = getPreviousSundayFormattedDate();
+        let sunFormatted = getNextSundayFormattedDate();
         let completeUrl = this.lectionaryUrl.replaceAll("DATE_HERE", sunFormatted)
         
         const response = await fetch(completeUrl);
