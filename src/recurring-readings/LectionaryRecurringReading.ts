@@ -59,7 +59,7 @@ export class LectionaryRecurringReading implements RecurringDiscordReading {
                 {
                     color: 8522444,
                     author: {
-                        name: "This Week's Lectionary Readings"
+                        name: "Next Week's Lectionary Readings"
                     },
                     title: obj.title,
                     fields: [
