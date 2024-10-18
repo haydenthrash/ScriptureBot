@@ -15,7 +15,7 @@ schedule.scheduleJob('0 12 * * 6', () => {
       });
 });
 
-schedule.scheduleJob('0 12 * * 3', () => {
+schedule.scheduleJob('0 15 * * 5', () => {
   recurringLectionaryReading.getWebhookMessage()
     .then((message) => {
       sendWebhookMessage(message)
