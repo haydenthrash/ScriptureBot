@@ -10,7 +10,7 @@ export class LectionaryRecurringReading implements RecurringDiscordReading {
 
     }
 
-    async getWebhookMessage(): Promise<DiscordWebhookMessage> {
+    async getDiscordWebhookMessage(): Promise<DiscordWebhookMessage> {
         var lectionary = await this.getSundayLectionaryReading();
         let parsedLectionary = this.parseLectionary(lectionary);
         return this.buildWebhookMessage(parsedLectionary);

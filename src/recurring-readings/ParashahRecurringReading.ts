@@ -9,7 +9,7 @@ export class ParashahRecurringReading implements RecurringDiscordReading {
 
     }
 
-    async getWebhookMessage(): Promise<DiscordWebhookMessage> {
+    async getDiscordWebhookMessage(): Promise<DiscordWebhookMessage> {
         var parashah = await this.getParashah();
         let parsedParashah = this.parseParashah(parashah);
         return this.buildWebhookMessage(parsedParashah);
